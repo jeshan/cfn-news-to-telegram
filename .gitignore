@@ -1,0 +1,6 @@
+
+.idea/
+cfn-news/code
+!cfn-news/code/index.py
+!cfn-news/code/data.html
+templates/cfn-news-packaged-template.yaml

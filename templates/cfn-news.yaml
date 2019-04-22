@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Get news or new CFN releases'
+
+Parameters:
+  TelegramBotToken:
+    Type: String
+    NoEcho: true
+  TelegramChatId:
+    Type: String
+
+Resources:
+  Fn:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../cfn-news/code
+      Handler: index.handler
+      Runtime: python3.6
+      Timeout: 120
+      Environment:
+        Variables:
+          TELEGRAM_BOT_TOKEN: !Ref TelegramBotToken
+          TELEGRAM_CHAT_ID: !Ref TelegramChatId
+      Events:
+        Schedule:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 17 ? * SAT *) # Saturdays at 17:00 UTC

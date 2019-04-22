@@ -1,0 +1,5 @@
+template_path: cfn-news-packaged-template.yaml
+
+parameters:
+  TelegramBotToken: !aws ssm::get_parameter::'Name':'bot-token','WithDecryption':True::Parameter.Value
+  TelegramChatId: !aws ssm::get_parameter::'Name':'/cfn-news-to-telegram/chat-id'::Parameter.Value
