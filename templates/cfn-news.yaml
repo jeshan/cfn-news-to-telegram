@@ -9,6 +9,19 @@ Parameters:
   TelegramChatId:
     Type: String
 
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: cfn-news-to-telegram
+    Description: Send Cloudformation feature releases to Telegram in a private chat on a weekly basis (Every Saturday at 17:00 UTC).
+    Author: jeshan
+    SpdxLicenseId: BSD-2-Clause
+    LicenseUrl: ../LICENCE.txt
+    ReadmeUrl: ../README.md
+    Labels: ['cloudformation', 'telegram']
+    HomePageUrl: https://github.com/jeshan/cfn-news-to-telegram
+    SemanticVersion: '0.1.1'
+    SourceCodeUrl: https://github.com/jeshan/cfn-news-to-telegram
+
 Resources:
   Fn:
     Type: AWS::Serverless::Function
