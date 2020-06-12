@@ -8,6 +8,8 @@ To deploy: `pipenv run bash deploy-cfn-news.sh`. This script leverages both AWS 
 ## Deploying via the Serverless Repo
 Enter a Telegram bot token and a chat ID (group ID or your own user)
 
+![](/diagram.png)
+
 ## Deploying via sceptre
 
 It expects the following parameters available in Systems Manager Parameter store:
