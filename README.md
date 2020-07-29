@@ -9,6 +9,8 @@ To deploy: `pipenv run bash deploy-cfn-news.sh`. This script leverages both AWS 
 Enter a Telegram bot token and a chat ID (group ID or your own user)
 
 ![](/diagram.png)
+*Image automatically generated with [cfnbuddy](https://www.cfnbuddy.com)*
+
 
 ## Deploying via sceptre
 
